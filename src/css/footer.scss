@@ -1,0 +1,210 @@
+body {
+    font-family: 'Helvetica Neue';
+}
+
+.clear::after {
+    content: '';
+    display: block;
+    clear: both;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+$s-gray:#333;
+$q-gray:#eee;
+$foot-bg:#F9F9F9;
+$main-red: #CB242B;
+footer {
+    background: $foot-bg;
+    .container {
+        // 头部
+        &>ul {
+            li {
+                float: left;
+                font: 18px 'Helvetica Neue';
+                height: 82px;
+                padding: 20px 0;
+                text-align: center;
+                i {
+                    display: inline-block;
+                    width: 40px;
+                    height: 40px;
+                    background: url('../img/icon-header.png') no-repeat -358px -207px;
+                    vertical-align: middle;
+                    margin-right: 15px;
+                }
+                a {
+                    color: $s-gray;
+                }
+                &.s2 i {
+                    background-position: -398px -207px;
+                }
+                &.s3 i {
+                    background-position: -438px -207px;
+                }
+                &.s4 i {
+                    background-position: -478px -207px;
+                }
+            }
+        }
+        // 中间
+        .main {
+            padding: 25px 0;
+            border-bottom: 1px solid $q-gray;
+            border-top: 1px solid $q-gray;
+            dl {
+                dt {
+                    font-size: 14px;
+                    font-weight: normal;
+                    color: #666;
+                    margin-bottom: 5px;
+                }
+                dd {
+                    margin: 3px 0;
+                    a {
+                        color: #888;
+                    }
+                }
+            }
+            .r {
+                border-left: 1px solid $q-gray;
+                text-align: center;
+                &>p {
+                    font-size: 20px;
+                    font-weight: 700;
+                    color: #CB242B;
+                    line-height: 1em;
+                }
+                span {
+                    display: block;
+                    margin: 10px 0;
+                    font-size: 14px;
+                }
+                &>a {
+                    display: block;
+                    font-size: 15px;
+                    width: 170px;
+                    height: 34px;
+                    border: 1px solid #cb242b;
+                    color: #CB242B;
+                    line-height: 34px;
+                    border-radius: 5px;
+                    margin: 0 auto 20px;
+                    i {
+                        display: inline-block;
+                        width: 20px;
+                        height: 20px;
+                        background: url('../img/icon-header.png') no-repeat -336px -213px;
+                        vertical-align: middle;
+                    }
+                }
+                &>ul {
+                    padding-left: 33px;
+                    li {
+                        float: left;
+                        margin-right: 15px;
+                        a {
+                            position: relative;
+                            display: block;
+                            width: 20px;
+                            height: 20px;
+                            background: url('../img/icon-header.png') no-repeat -357px -175px;
+                            &:hover {
+                                background-position-x: -333px;
+                                .wx {
+                                    display: block;
+                                }
+                            }
+                            .wx {
+                                position: absolute;
+                                display: none;
+                                left: 50%;
+                                top: 30px;
+                                transform: translateX(-50%);
+                                padding: 5px;
+                                background: #fff;
+                                box-shadow: 0 0 5px #ddd;
+                                &::before {
+                                    content: '';
+                                    position: absolute;
+                                    top: -5px;
+                                    left: 50%;
+                                    transform: translateX(-50%);
+                                    width: 0;
+                                    height: 0;
+                                    border-left: 4px solid transparent;
+                                    border-right: 4px solid transparent;
+                                    border-bottom: 8px solid #fff;
+                                }
+                                img {
+                                    width: 108px;
+                                }
+                            }
+                        }
+                        &.li2 a {
+                            background-position-X: -406px;
+                            &:hover {
+                                background-position-x: -382px;
+                            }
+                        }
+                        &.li3 a {
+                            background-position-X: -453px;
+                            &:hover {
+                                background-position-x: -429px;
+                            }
+                        }
+                        &.li4 a {
+                            background-position-X: -501px;
+                            &:hover {
+                                background-position-x: -477px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .boot {
+            padding: 25px 0;
+            &>div {
+                float: left;
+            }
+            .logo {
+                margin-right: 15px;
+            }
+            .mes {
+                color: #999;
+                li {
+                    float: left;
+                    padding: 0 5px;
+                    border-right: 1px solid #999;
+                    line-height: 1em;
+                    a {
+                        color: #777;
+                        &:hover {
+                            color: $main-red;
+                        }
+                    }
+                    &:first-child {
+                        padding-left: 0;
+                    }
+                    &:last-child {
+                        border: none;
+                    }
+                }
+                p {
+                    margin: 5px 0;
+                    a {
+                        color: #888;
+                        &:hover {
+                            color: $main-red;
+                        }
+                    }
+                }
+            }
+            .check {
+                float: right;
+            }
+        }
+    }
+}

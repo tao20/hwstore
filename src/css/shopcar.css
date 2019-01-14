@@ -1,0 +1,430 @@
+.hr-60 {
+  height: 60px;
+}
+
+.header {
+  padding: 0 !important;
+}
+
+.header .top {
+  display: none;
+}
+
+.header .shortcut {
+  background-color: #fff;
+  height: 30px;
+  line-height: 30px;
+}
+
+.header .shortcut .container ul {
+  height: 30px;
+  line-height: 30px;
+}
+
+.header .shortcut .container ul .s-dropdown {
+  display: none;
+}
+
+.header .shortcut .container ul.right li::after {
+  width: 0;
+}
+
+.nav {
+  margin: 13px 0;
+}
+
+.nav .logo {
+  float: left;
+  font-size: 22px;
+  color: #3a3a3a;
+}
+
+.nav .logo a {
+  vertical-align: middle;
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.nav .logo span {
+  display: inline-block;
+  line-height: 50px;
+}
+
+.nav .status {
+  float: right;
+  width: 425px;
+  height: 50px;
+  background: url("../img/sprites6.8c58970.png") no-repeat 0 0;
+}
+
+.main {
+  background: #f5f5f5;
+  margin-top: 10px;
+  padding-top: 10px;
+}
+
+.main .logo-hint {
+  height: 50px;
+  background: #fffdee;
+  border: 1px solid #eace85;
+  line-height: 48px;
+  color: #ca141d;
+  margin-bottom: 20px;
+}
+
+.main .logo-hint a {
+  display: inline-block;
+  width: 70px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  background: #ca141d;
+  color: #fff;
+  margin-left: 5px;
+}
+
+.main .logo-hint span i {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 0 5px 0 20px;
+  vertical-align: middle;
+  background: url("../img/icon-tips01.2080462.png");
+}
+
+.main .shoplist .empty {
+  display: block;
+  background: #fff;
+  font-size: 18px;
+  padding-top: 135px;
+  height: 500px;
+  text-align: center;
+}
+
+.main .shoplist .empty > span {
+  display: block;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 36px;
+  background: url("../img/icon-header-minicart.32e5f81.png");
+}
+
+.main .shoplist .empty > p {
+  color: #a4a4a4;
+}
+
+.main .shoplist .empty > a {
+  display: block;
+  width: 172px;
+  height: 46px;
+  line-height: 46px;
+  background: #ca141d;
+  color: #fff;
+  margin: 20px auto 0;
+}
+
+.main .shoplist .show1 {
+  display: none;
+}
+
+.main .shoplist .show1 > div {
+  background: #fff;
+  padding-left: 40px;
+}
+
+.main .shoplist .show1 > div.tit label {
+  float: left;
+  width: 150px;
+  height: 40px;
+  line-height: 40px;
+  margin-bottom: 0;
+  color: #888;
+}
+
+.main .shoplist .show1 > div.tit label input {
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  vertical-align: middle;
+}
+
+.main .shoplist .show1 > div.tit ul {
+  float: left;
+}
+
+.main .shoplist .show1 > div.tit ul li {
+  float: left;
+  width: 100px;
+  height: 40px;
+  line-height: 40px;
+  margin-left: 30px;
+  text-align: center;
+  color: #888;
+}
+
+.main .shoplist .show1 > div.tit ul li:first-child {
+  width: 450px;
+  margin-left: 0;
+  text-align: left;
+}
+
+.main .shoplist .show1 form {
+  margin-top: 10px;
+}
+
+.main .shoplist .show1 form .list {
+  background: #fff;
+  padding: 20px 0 20px 40px;
+  margin-bottom: 10px;
+}
+
+.main .shoplist .show1 form .list input {
+  float: left;
+  width: 16px;
+  height: 16px;
+  margin-top: 43px;
+}
+
+.main .shoplist .show1 form .list .list-main {
+  float: left;
+  width: 98%;
+  margin-left: 5px;
+  font-size: 14px;
+}
+
+.main .shoplist .show1 form .list .list-main img {
+  width: 100px;
+}
+
+.main .shoplist .show1 form .list .list-main a {
+  display: inline-block;
+  width: 450px;
+  color: #444;
+  margin-left: 10px;
+  vertical-align: top;
+}
+
+.main .shoplist .show1 form .list .list-main span {
+  display: inline-block;
+  width: 100px;
+  margin-left: 55px;
+  vertical-align: top;
+}
+
+.main .shoplist .show1 form .list .list-main .add {
+  display: inline-block;
+  margin-left: 30px;
+}
+
+.main .shoplist .show1 form .list .list-main .add input {
+  float: left;
+  width: 42px;
+  height: 42px;
+  line-height: 42px;
+  outline: none;
+  text-align: center;
+  font-size: 18px;
+  color: #393939;
+  border: 1px solid #ccc;
+  margin-top: 0;
+}
+
+.main .shoplist .show1 form .list .list-main .add p {
+  float: left;
+  margin-left: -1px;
+}
+
+.main .shoplist .show1 form .list .list-main .add p a {
+  display: block;
+  width: 20px;
+  height: 21px;
+  border: 1px solid #ccc;
+  color: #666;
+  font-size: 18px;
+  text-align: center;
+  line-height: 20px;
+  font-weight: bold;
+  margin-left: 0;
+}
+
+.main .shoplist .show1 form .list .list-main .add p a:last-child {
+  border-top: 0;
+}
+
+.main .shoplist .show1 form .list .list-main .price {
+  color: #ca141d;
+  vertical-align: top;
+  margin-left: 20px;
+}
+
+.main .shoplist .show1 form .list .list-main .del {
+  float: right;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 85px;
+  text-decoration: none;
+  cursor: pointer;
+  color: #888;
+}
+
+.main .shoplist .show1 form .preset {
+  background: #fff;
+  height: 60px;
+  line-height: 60px;
+  padding-left: 40px;
+}
+
+.main .shoplist .show1 form .preset .sele {
+  float: left;
+  color: #666;
+}
+
+.main .shoplist .show1 form .preset .sele input {
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+  margin-top: 0;
+}
+
+.main .shoplist .show1 form .preset .sele del {
+  text-decoration: none;
+  cursor: pointer;
+  margin-left: 15px;
+}
+
+.main .shoplist .show1 form .preset .preset-mes {
+  float: right;
+}
+
+.main .shoplist .show1 form .preset .preset-mes > div {
+  float: left;
+}
+
+.main .shoplist .show1 form .preset .preset-mes > div.l {
+  padding-top: 5px;
+  line-height: 24px;
+  text-align: right;
+}
+
+.main .shoplist .show1 form .preset .preset-mes > div.l p:first-child {
+  font-size: 14px;
+  color: #444;
+}
+
+.main .shoplist .show1 form .preset .preset-mes > div.l p:first-child i {
+  color: #ca141d;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.main .shoplist .show1 form .preset .preset-mes > div.l p:last-child {
+  color: #888;
+}
+
+.main .shoplist .show1 form .preset .preset-mes > div.l p:last-child em {
+  color: #ca141d;
+  font-size: 15px;
+}
+
+.main .shoplist .show1 form .preset .preset-mes > div.l p:last-child b {
+  font-weight: normal;
+  color: #444;
+}
+
+.main .shoplist .show1 form .preset .preset-mes > div.r {
+  margin-left: 15px;
+}
+
+.main .shoplist .show1 form .preset .preset-mes > div.r a {
+  display: block;
+  width: 180px;
+  background: #ca141d;
+  font-size: 18px;
+  color: #fff;
+  text-align: center;
+  line-height: 60px;
+  border-radius: 1px;
+}
+
+.main .recommend {
+  margin-top: 30px;
+}
+
+.main .recommend > span {
+  font-size: 18px;
+  color: #3a3a3a;
+}
+
+.main .recommend .mask {
+  overflow: hidden;
+  margin-top: 10px;
+  position: relative;
+}
+
+.main .recommend .mask .list1 {
+  background: #fff;
+  width: 2000px;
+  padding: 20px 10px 18px;
+}
+
+.main .recommend .mask .list1 li {
+  float: left;
+  width: 222px;
+  height: 200px;
+  text-align: center;
+  font-size: 13px;
+}
+
+.main .recommend .mask .list1 li:first-child {
+  margin-left: 40px;
+}
+
+.main .recommend .mask .list1 li img {
+  width: 134px;
+}
+
+.main .recommend .mask .list1 li span {
+  display: block;
+  margin: 5px auto 18px;
+  color: #3a3a3a;
+}
+
+.main .recommend .mask .list1 li i {
+  color: #3a3a3a;
+}
+
+.main .recommend .mask > div {
+  position: absolute;
+  width: 40px;
+  height: 178px;
+  top: 25px;
+}
+
+.main .recommend .mask > div::after {
+  content: '';
+  display: block;
+  width: 9px;
+  height: 16px;
+  margin: 81px 0 0 16px;
+  background: url("../img/icon51.1593500.png");
+}
+
+.main .recommend .mask > div.prev {
+  left: 10px;
+}
+
+.main .recommend .mask > div.prev::after {
+  background-position-y: -16px;
+}
+
+.main .recommend .mask > div.prev:hover::after {
+  background-position-x: -18px;
+}
+
+.main .recommend .mask > div.next {
+  right: 10px;
+}
+
+.main .recommend .mask > div.next:hover::after {
+  background-position-x: -18px;
+}

@@ -1,0 +1,1 @@
+function setCookie(e,o,t){if(t){var i=new Date;i.setDate(i.getDate+t),document.cookie=e+"="+o+";expires="+i}else document.cookie=e+"="+o}function getCookie(e){if(document.cookie)for(var o=document.cookie.split("; "),t=0;t<o.length;t++){var i=o[t].split("=");if(e===i[0])return i[1]}return""}function removeCookie(e){setCookie(e,"",-1)}

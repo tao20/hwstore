@@ -1,0 +1,385 @@
+    .hr-60 {
+        height: 60px;
+    }
+    
+    .header {
+        padding: 0 !important;
+        .top {
+            display: none;
+        }
+        .shortcut {
+            background-color: #fff;
+            height: 30px;
+            line-height: 30px;
+            .container {
+                ul {
+                    height: 30px;
+                    line-height: 30px;
+                    .s-dropdown {
+                        display: none;
+                    }
+                    &.right {
+                        li::after {
+                            width: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    .nav {
+        margin: 13px 0;
+        .logo {
+            float: left;
+            font-size: 22px;
+            color: #3a3a3a;
+            a {
+                vertical-align: middle;
+                display: inline-block;
+                margin-right: 15px;
+            }
+            span {
+                display: inline-block;
+                line-height: 50px;
+            }
+        }
+        .status {
+            float: right;
+            width: 425px;
+            height: 50px;
+            background: url('../img/sprites6.8c58970.png') no-repeat 0 0;
+        }
+    }
+    
+    .main {
+        background: #f5f5f5;
+        margin-top: 10px;
+        padding-top: 10px;
+        .logo-hint {
+            height: 50px;
+            background: #fffdee;
+            border: 1px solid #eace85;
+            line-height: 48px;
+            color: #ca141d;
+            margin-bottom: 20px;
+            a {
+                display: inline-block;
+                width: 70px;
+                height: 30px;
+                line-height: 30px;
+                text-align: center;
+                background: #ca141d;
+                color: #fff;
+                margin-left: 5px;
+            }
+            span {
+                i {
+                    display: inline-block;
+                    width: 12px;
+                    height: 12px;
+                    margin: 0 5px 0 20px;
+                    vertical-align: middle;
+                    background: url('../img/icon-tips01.2080462.png');
+                }
+            }
+        }
+        // 购物车列表
+        .shoplist {
+            // 无商品
+            .empty {
+                display: block;
+                background: #fff;
+                font-size: 18px;
+                padding-top: 135px;
+                height: 500px;
+                text-align: center;
+                &>span {
+                    display: block;
+                    width: 100px;
+                    height: 100px;
+                    margin: 0 auto 36px;
+                    background: url('../img/icon-header-minicart.32e5f81.png');
+                }
+                &>p {
+                    color: #a4a4a4;
+                }
+                &>a {
+                    display: block;
+                    width: 172px;
+                    height: 46px;
+                    line-height: 46px;
+                    background: #ca141d;
+                    color: #fff;
+                    margin: 20px auto 0;
+                }
+            }
+            // 有商品
+            .show1 {
+                display: none;
+                &>div {
+                    background: #fff;
+                    padding-left: 40px;
+                    &.tit {
+                        label {
+                            float: left;
+                            width: 150px;
+                            height: 40px;
+                            line-height: 40px;
+                            margin-bottom: 0;
+                            color: #888;
+                            input {
+                                width: 16px;
+                                height: 16px;
+                                margin: 0;
+                                vertical-align: middle;
+                            }
+                        }
+                        ul {
+                            float: left;
+                            li {
+                                float: left;
+                                width: 100px;
+                                height: 40px;
+                                line-height: 40px;
+                                margin-left: 30px;
+                                text-align: center;
+                                color: #888;
+                                &:first-child {
+                                    width: 450px;
+                                    margin-left: 0;
+                                    text-align: left;
+                                }
+                            }
+                        }
+                    }
+                }
+                form {
+                    margin-top: 10px;
+                    .list {
+                        background: #fff;
+                        padding: 20px 0 20px 40px;
+                        margin-bottom: 10px;
+                        input {
+                            float: left;
+                            width: 16px;
+                            height: 16px;
+                            margin-top: 43px;
+                        }
+                        .list-main {
+                            float: left;
+                            width: 98%;
+                            margin-left: 5px;
+                            font-size: 14px;
+                            img {
+                                width: 100px;
+                            }
+                            a {
+                                display: inline-block;
+                                width: 450px;
+                                color: #444;
+                                margin-left: 10px;
+                                vertical-align: top;
+                            }
+                            span {
+                                display: inline-block;
+                                width: 100px;
+                                margin-left: 55px;
+                                vertical-align: top;
+                            }
+                            //  手动选择数量的
+                            .add {
+                                display: inline-block;
+                                margin-left: 30px;
+                                input {
+                                    float: left;
+                                    width: 42px;
+                                    height: 42px;
+                                    line-height: 42px;
+                                    outline: none;
+                                    text-align: center;
+                                    font-size: 18px;
+                                    color: #393939;
+                                    border: 1px solid #ccc;
+                                    margin-top: 0;
+                                }
+                                p {
+                                    float: left;
+                                    margin-left: -1px;
+                                    a {
+                                        display: block;
+                                        width: 20px;
+                                        height: 21px;
+                                        border: 1px solid #ccc;
+                                        color: #666;
+                                        font-size: 18px;
+                                        text-align: center;
+                                        line-height: 20px;
+                                        font-weight: bold;
+                                        margin-left: 0;
+                                        &:last-child {
+                                            border-top: 0;
+                                        }
+                                    }
+                                }
+                            }
+                            // 价格
+                            .price {
+                                color: #ca141d;
+                                vertical-align: top;
+                                margin-left: 20px;
+                            }
+                            // 删除
+                            .del {
+                                float: right;
+                                display: inline-block;
+                                vertical-align: top;
+                                margin-right: 85px;
+                                text-decoration: none;
+                                cursor: pointer;
+                                color: #888;
+                            }
+                        }
+                    }
+                    // 提交订单
+                    .preset {
+                        background: #fff;
+                        height: 60px;
+                        line-height: 60px;
+                        padding-left: 40px;
+                        .sele {
+                            float: left;
+                            color: #666;
+                            input {
+                                width: 16px;
+                                height: 16px;
+                                vertical-align: middle;
+                                margin-top: 0;
+                            }
+                            del {
+                                text-decoration: none;
+                                cursor: pointer;
+                                margin-left: 15px;
+                            }
+                        }
+                        .preset-mes {
+                            float: right;
+                            &>div {
+                                float: left;
+                                &.l {
+                                    padding-top: 5px;
+                                    line-height: 24px;
+                                    text-align: right;
+                                    p:first-child {
+                                        font-size: 14px;
+                                        color: #444;
+                                        i {
+                                            color: #ca141d;
+                                            font-weight: bold;
+                                            font-size: 18px;
+                                        }
+                                    }
+                                    p:last-child {
+                                        color: #888;
+                                        em {
+                                            color: #ca141d;
+                                            font-size: 15px;
+                                        }
+                                        b {
+                                            font-weight: normal;
+                                            color: #444;
+                                        }
+                                    }
+                                }
+                                &.r {
+                                    margin-left: 15px;
+                                    a {
+                                        display: block;
+                                        width: 180px;
+                                        background: #ca141d;
+                                        font-size: 18px;
+                                        color: #fff;
+                                        text-align: center;
+                                        line-height: 60px;
+                                        border-radius: 1px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        // 推荐
+        .recommend {
+            margin-top: 30px;
+            &>span {
+                font-size: 18px;
+                color: #3a3a3a;
+            }
+            .mask {
+                overflow: hidden;
+                margin-top: 10px;
+                position: relative;
+                .list1 {
+                    background: #fff;
+                    width: 2000px;
+                    padding: 20px 10px 18px;
+                    li {
+                        float: left;
+                        width: 222px;
+                        height: 200px;
+                        text-align: center;
+                        font-size: 13px;
+                        &:first-child {
+                            margin-left: 40px;
+                        }
+                        img {
+                            width: 134px;
+                        }
+                        span {
+                            display: block;
+                            margin: 5px auto 18px;
+                            color: #3a3a3a;
+                        }
+                        i {
+                            color: #3a3a3a;
+                        }
+                    }
+                }
+                &>div {
+                    position: absolute;
+                    width: 40px;
+                    height: 178px;
+                    top: 25px;
+                    &::after {
+                        content: '';
+                        display: block;
+                        width: 9px;
+                        height: 16px;
+                        margin: 81px 0 0 16px;
+                        background: url('../img/icon51.1593500.png');
+                    }
+                    &.prev {
+                        left: 10px;
+                        &::after {
+                            background-position-y: -16px;
+                        }
+                        &:hover {
+                            &::after {
+                                background-position-x: -18px;
+                            }
+                        }
+                    }
+                    &.next {
+                        right: 10px;
+                        &:hover {
+                            &::after {
+                                background-position-x: -18px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }

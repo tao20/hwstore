@@ -1,0 +1,511 @@
+@charset 'utf-8';
+html,
+body,
+ul,
+li,
+input,
+p,
+button,
+em,
+i,
+strong,
+b,
+a,
+dl,
+dt,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    padding: 0;
+    margin: 0;
+    font-style: normal;
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+    font-size: 12px;
+    font-family: 'Helvetica Neue';
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.clear::after {
+    content: '';
+    display: block;
+    clear: both;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+// 颜色变量
+$shortcut-bgcolor: #f9f9f9;
+$white:#fff;
+$main-fontColor:#ca151d;
+$gray:#ccc;
+$login-blue: #0064cc;
+// ==============================================
+header {
+    &>.top {
+        height: 90px;
+        img {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        i {
+            position: absolute;
+            top: 15px;
+            right: 25px;
+            width: 24px;
+            height: 24px;
+            background: url('../img/icon1.png') no-repeat 0 -385px;
+            cursor: pointer;
+        }
+    }
+    // 灰色小导航条的部分
+    &>.shortcut {
+        background-color: $shortcut-bgcolor;
+        &>.container {
+            ul {
+                display: table-cell;
+                height: 40px;
+                line-height: 40px;
+                li {
+                    float: left;
+                    position: relative;
+                    padding: 0 8px;
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        right: 0;
+                        top: 50%;
+                        margin-top: -5px;
+                        display: block;
+                        width: 1px;
+                        height: 10px;
+                        background: #d3dede;
+                    }
+                    a {
+                        margin: 0 3px;
+                        color: #a4a4a4;
+                        &:hover {
+                            color: $main-fontColor;
+                        }
+                    }
+                }
+            }
+            // 左边的ul
+            ul.left {
+                &>li:last-child:after {
+                    width: 0;
+                }
+            }
+            //右边的ul
+            ul.right {
+                &>.s-dropdown {
+                    position: relative;
+                    box-sizing: border-box;
+                    width: 80px;
+                    padding-right: 13px;
+                    &>div {
+                        z-index: 5;
+                        box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+                    }
+                    &:hover {
+                        background: #fff;
+                        &::after {
+                            width: 0;
+                        }
+                        &>a {
+                            color: $main-fontColor;
+                        }
+                        i {
+                            transform: translateY(-4px) rotate(180deg);
+                            border-top-color: $main-fontColor;
+                        }
+                        &>.slider {
+                            display: block;
+                        }
+                    }
+                    &>a i {
+                        position: absolute;
+                        right: 5px;
+                        top: 50%;
+                        margin-top: -1px;
+                        width: 0;
+                        height: 0;
+                        border: 4px solid transparent;
+                        border-top-color: #888;
+                    }
+                    &>.slider-help {
+                        position: absolute;
+                        background-color: $white;
+                        left: 0;
+                        $gray: $gray;
+                        padding-bottom: 10px;
+                        display: none;
+                        span {
+                            display: block;
+                            width: 80px;
+                            height: 30px;
+                            text-align: center;
+                            &>a {
+                                color: #666;
+                                &:hover {
+                                    color: $main-fontColor;
+                                }
+                            }
+                        }
+                    }
+                    //头部二级导航栏
+                    &>.slider-nav {
+                        position: absolute;
+                        background-color: $white;
+                        right: 0;
+                        $gray: $gray;
+                        width: 890px;
+                        height: 160px;
+                        display: none;
+                        &>.logoB {
+                            float: left;
+                            margin: 37px 46px 0 49px;
+                            cursor: pointer;
+                            line-height: 1em;
+                            text-align: center;
+                            &>.logo {
+                                width: 50px;
+                                height: 50px;
+                                background: url('../img/icon-header.png') no-repeat -41px 0;
+                                margin-bottom: 8px;
+                            }
+                            a {
+                                margin: 0;
+                                &:hover {
+                                    float: left;
+                                    color: $main-fontColor;
+                                }
+                            }
+                        }
+                        &>dl {
+                            float: left;
+                            width: 185px;
+                            padding-top: 25px;
+                            dt {
+                                font-size: 16px;
+                            }
+                            dd {
+                                width: 80px;
+                                float: left;
+                                line-height: 25px;
+                                a {
+                                    margin: 0;
+                                    color: #666;
+                                    &:hover {
+                                        color: $main-fontColor;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &>.slider-mobile {
+                        position: absolute;
+                        display: none;
+                        right: 0;
+                        width: 244px;
+                        background-color: $white;
+                        padding: 20px 0 0;
+                        $gray: $gray;
+                        .detail {
+                            height: 111px;
+                            box-sizing: border-box;
+                            padding: 0 0 20px 24px;
+                            margin-bottom: 20px;
+                            border-bottom: 1px solid $gray;
+                            &>div {
+                                float: left;
+                            }
+                            &:last-child {
+                                padding-bottom: 0;
+                                border-radius: 5px;
+                                margin: 0;
+                            }
+                            .l-img img {
+                                width: 90px;
+                            }
+                            .r-news {
+                                margin-left: 10px;
+                                line-height: 16px;
+                                color: $main-fontColor;
+                                h4 {
+                                    font-size: 14px;
+                                    line-height: 1em;
+                                    margin-bottom: 4px;
+                                    color: #000;
+                                }
+                                em {
+                                    display: block;
+                                    margin-top: 5px;
+                                    width: 32px;
+                                    height: 32px;
+                                    background: url('../img/icon-header.png') no-repeat -484px 0;
+                                    &.wx {
+                                        background: url('../img/icon-header.png') no-repeat -518px 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &>.minicar-empty {
+                        position: absolute;
+                        right: 0;
+                        width: 460px;
+                        height: 230px;
+                        box-sizing: border-box;
+                        background: $white;
+                        display: none;
+                        $gray: $gray;
+                        padding: 20px 0;
+                        border-radius: 5px;
+                        .icon {
+                            width: 100px;
+                            height: 100px;
+                            background: url('../img/icon-header.png') no-repeat 0 -166px;
+                            margin: 0 auto;
+                        }
+                        .carinfo {
+                            font-size: 14px;
+                            color: #888;
+                            text-align: center;
+                        }
+                        a {
+                            display: block;
+                            width: 150px;
+                            height: 40px;
+                            text-align: center;
+                            line-height: 40px;
+                            color: #333;
+                            border: 1px solid #999;
+                            border-radius: 3px;
+                            font-size: 15px;
+                            margin: 0 auto;
+                            &:hover {
+                                color: $main-fontColor;
+                                border-color: $main-fontColor;
+                            }
+                        }
+                    }
+                }
+                &>.mobile {
+                    width: 70px;
+                }
+                &>.no-line:after {
+                    width: 0;
+                }
+                &>.shopcar {
+                    padding: 0 0 0 20px;
+                    background: #f2f2f2;
+                    b {
+                        position: absolute;
+                        left: 7px;
+                        top: 50%;
+                        margin-top: -6px;
+                        width: 13px;
+                        height: 12px;
+                        background: url("../img/icon-header.png") no-repeat -1px -1px;
+                    }
+                }
+            }
+        }
+    }
+    // 登录框
+    #modul {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.2);
+        .content {
+            width: 498px;
+            position: absolute;
+            left: 50%;
+            top: 15%;
+            transform: translate(-50%);
+            box-shadow: 0, 0, 5px, rgba(0, 0, 0, 0.1);
+            .t {
+                background: $main-fontColor;
+                height: 29px;
+                border: 1px solid $main-fontColor;
+                border-bottom: 0;
+                text-align: right;
+                cursor: move;
+                span {
+                    margin-right: 10px;
+                    font-size: 18px;
+                    color: #fff;
+                    cursor: pointer;
+                }
+            }
+            .b {
+                padding-top: 20px;
+                text-align: center;
+                background: #fff;
+                &>a {
+                    display: inline-block;
+                    width: 190px;
+                    height: 30px;
+                    line-height: 30px;
+                    font-size: 20px;
+                    color: #333;
+                    text-align: center;
+                    &.active {
+                        color: $main-fontColor;
+                    }
+                    &:first-child {
+                        border-right: 1px solid $gray;
+                    }
+                    &:hover {
+                        color: $main-fontColor;
+                    }
+                }
+                form {
+                    padding-top: 25px;
+                    input {
+                        width: 328px;
+                        height: 46px;
+                        outline: none;
+                        border: none;
+                        border-bottom: 1px solid $gray;
+                        color: #333;
+                        font-size: 14px;
+                        &::-webkit-input-placeholder {
+                            color: $gray;
+                        }
+                        &[type="button"] {
+                            background: #B40707;
+                            color: $white;
+                            font-size: 14px;
+                            height: 44px;
+                            border-radius: 25px;
+                            margin-top: 15px;
+                            cursor: pointer;
+                            &:hover {
+                                background: #C70000;
+                            }
+                        }
+                    }
+                    .mes-login {
+                        padding: 15px 0 0 82px;
+                        color: $login-blue;
+                        text-align: left;
+                        cursor: pointer;
+                        i {
+                            display: inline-block;
+                            width: 16px;
+                            height: 16px;
+                            margin-right: 5px;
+                            background: url('../img/ic_smLogin.png') no-repeat center;
+                            vertical-align: middle;
+                        }
+                    }
+                    .more {
+                        padding: 15px 82px;
+                        label {
+                            float: left;
+                            cursor: pointer;
+                            color: #888;
+                            input {
+                                width: 14px;
+                                height: 14px;
+                                vertical-align: middle;
+                                margin-right: 5px;
+                            }
+                        }
+                        a {
+                            float: right;
+                            color: $login-blue;
+                        }
+                    }
+                    &>a {
+                        color: $login-blue;
+                    }
+                }
+                // 其他方式登录
+                .f {
+                    margin-top: 110px;
+                    margin-bottom: 30px;
+                    .other {
+                        padding-bottom: 10px;
+                        i {
+                            display: inline-block;
+                            width: 94px;
+                            height: 1px;
+                            background: url('../img/thirdLine.png');
+                            vertical-align: middle;
+                            &.third-reverse {
+                                background: url('../img/thirdLine-reverse.png');
+                            }
+                        }
+                        span {
+                            color: $gray;
+                        }
+                    }
+                    &>span a {
+                        display: inline-block;
+                        width: 42px;
+                        height: 42px;
+                        margin: 0 10px;
+                        background: url('../img/third_login.png') no-repeat -73px -10px;
+                        &:hover {
+                            background-position: -73px -56px;
+                        }
+                        &:nth-of-type(2),
+                        &:nth-of-type(2):hover {
+                            background-position-X: -133px;
+                        }
+                        &:nth-of-type(3),
+                        &:nth-child(3):hover {
+                            background-position-X: -13px;
+                        }
+                    }
+                }
+                .last {
+                    color: #666;
+                    padding-bottom: 20px;
+                    a {
+                        color: $login-blue;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}

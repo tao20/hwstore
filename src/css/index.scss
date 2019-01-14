@@ -1,0 +1,403 @@
+.hr-60 {
+    height: 60px;
+    width: 100%;
+    display: block;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.container {
+    padding: 0;
+}
+
+$main-red:#900;
+$white: #fff;
+$gray:#333;
+.banner {
+    height: 448px;
+    position: relative;
+    a {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        float: left;
+    }
+    .circles {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        z-index: 100;
+        transform: translateX(-50%);
+        li {
+            float: left;
+            width: 12px;
+            height: 12px;
+            margin-left: 10px;
+            border: 1px solid $white;
+            border-radius: 50%;
+            cursor: pointer;
+            &.act {
+                background: $white;
+            }
+        }
+    }
+}
+
+.channel-floor {
+    .h {
+        margin-bottom: 16px;
+        h2 {
+            font: 30px 'microsoft yahei';
+            text-align: center;
+            margin-bottom: 25px;
+            &>a:hover {
+                color: $main-red;
+            }
+            &::before {
+                content: '';
+                display: block;
+                height: 4px;
+                width: 24px;
+                margin: 0 auto;
+                background: #900;
+            }
+        }
+    }
+    .b {
+        .toggle {
+            position: relative;
+            float: left;
+            margin-left: -1px;
+            margin-bottom: 15px;
+            &>a {
+                display: inline-block;
+                width: 299px;
+                height: 278px;
+                border: 1px solid #eaeaea;
+                &>img {
+                    height: 100%;
+                }
+            }
+            &::before {
+                position: absolute;
+                top: 0;
+                content: '';
+                display: block;
+                width: 0;
+                height: 4px;
+                background: #900;
+                transition: all 0.2s linear;
+            }
+            &:hover {
+                &::before {
+                    width: 100%;
+                }
+            }
+        }
+        .grid-item {
+            li {
+                margin-left: 20px;
+                float: left;
+                position: relative;
+                &:first-child {
+                    margin-left: 0;
+                }
+                .gray {
+                    background: #888;
+                }
+                // lihover的时候   显示右半边的半透明背景
+                &:hover {
+                    p {
+                        background: rgba(153, 0, 0, 0.8);
+                    }
+                }
+                a>div {
+                    // width: 386px;
+                    height: 190px;
+                }
+                // 半透明的盒子
+                p {
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    width: 190px;
+                    height: 100%;
+                    box-sizing: border-box;
+                    padding: 20px;
+                    color: $white;
+                    i {
+                        font-size: 18px;
+                    }
+                    span {
+                        display: block;
+                        margin: 10px 0 25px;
+                    }
+                    em {
+                        font-size: 13px;
+                        &::before {
+                            content: '';
+                            display: block;
+                            margin-bottom: 5px;
+                            width: 24px;
+                            height: 2px;
+                            background: $white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 手机分类
+.channel-floor,
+.mobile {
+    .h {
+        position: relative;
+        h2 a {
+            color: $gray;
+        }
+        ul {
+            text-align: center;
+            font-size: 14px;
+            padding-bottom: 5px;
+            li {
+                display: inline-block;
+                a {
+                    margin: 0 10px;
+                    color: #666;
+                    &:hover {
+                        color: $main-red;
+                    }
+                }
+            }
+        }
+        //右侧更多的样式
+        .more {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            a {
+                display: block;
+                width: 68px;
+                height: 29px;
+                border: 1px solid #ccc;
+                color: $gray;
+                text-align: center;
+                line-height: 29px;
+                // 小三角
+                &::after {
+                    content: '';
+                    display: inline-block;
+                    border-top: 4px solid transparent;
+                    border-left: 6px solid $gray;
+                    border-bottom: 4px solid transparent;
+                    margin-left: 10px;
+                }
+                &:hover {
+                    border-color: $main-red;
+                    color: $main-red;
+                    &::after {
+                        border-left-color: $main-red;
+                    }
+                }
+            }
+        }
+    }
+    // 手机部分的设置
+    .b {
+        .phones {
+            li {
+                float: left;
+                text-align: center;
+                margin-left: 12px;
+                padding: 0;
+                position: relative;
+                &:first-child {
+                    margin-left: 0;
+                }
+                &.top {
+                    margin-top: 12px;
+                }
+                .mes {
+                    position: absolute;
+                    top: 20px;
+                    left: 30px;
+                    font: 18px 'microsoft yahei';
+                    color: $gray;
+                    text-align: left;
+                    &::before {
+                        content: '';
+                        display: block;
+                        width: 24px;
+                        height: 2px;
+                        background: $main-red;
+                        margin-bottom: 12px;
+                    }
+                    i {
+                        color: $main-red;
+                    }
+                    p {
+                        margin-bottom: 15px;
+                    }
+                }
+                .white {
+                    color: $white;
+                    i {
+                        color: $white;
+                    }
+                }
+                .new,
+                .hot {
+                    position: absolute;
+                    right: 20px;
+                    bottom: 20px;
+                    width: 48px;
+                    height: 48px;
+                    text-align: center;
+                    line-height: 48px;
+                    font-size: 14px;
+                    color: $white;
+                    border-radius: 50%;
+                    background: #00DB4B;
+                }
+                .hot {
+                    background: #FDB610;
+                }
+            }
+        }
+    }
+}
+
+.computer {
+    .b {
+        .toggle {
+            width: 400px;
+            margin-bottom: 0;
+            a {
+                width: 400px;
+                height: 374px;
+                position: relative;
+                display: inline-block;
+                text-align: center;
+                font-size: 14px;
+                img.sm {
+                    display: block;
+                    width: 200px;
+                    margin: 39px auto 0;
+                }
+                .new {
+                    position: absolute;
+                    right: 100px;
+                    bottom: 130px;
+                    width: 48px;
+                    height: 48px;
+                    text-align: center;
+                    line-height: 48px;
+                    font-size: 14px;
+                    color: $white;
+                    border-radius: 50%;
+                    background: #00DB4B;
+                }
+                p {
+                    font-size: 18px;
+                    color: $gray;
+                    margin-top: 30px;
+                }
+                span {
+                    color: #888;
+                }
+                i {
+                    display: block;
+                    color: $main-red;
+                    &::before {
+                        content: '';
+                        display: block;
+                        margin: 10px auto 5px;
+                        width: 24px;
+                        height: 2px;
+                        background: $main-red;
+                    }
+                }
+            }
+            &:hover {
+                .shadow {
+                    background: $main-red;
+                }
+            }
+            .shadow {
+                position: absolute;
+                left: 400px;
+                top: 0;
+                width: 400px;
+                height: 100%;
+                background: rgba(0, 0, 0, .4);
+                padding: 74px 10px 0 22px;
+                font-size: 14px;
+                text-align: left;
+                span {
+                    color: $white;
+                    font-size: 25px;
+                }
+                b {
+                    display: block;
+                    margin-top: 5px;
+                    color: $white;
+                }
+                i {
+                    color: $white;
+                    &::before {
+                        margin: 15px 0 10px 0;
+                        background: $white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.go-top {
+    position: fixed;
+    right: 0;
+    bottom: 100px;
+    background: $white;
+    li {
+        width: 38px;
+        height: 41px;
+        cursor: pointer;
+        background: url('../img/icon-header.png') no-repeat -215px -120px;
+        a {
+            display: block;
+            width: 38px;
+            height: 41px;
+            text-indent: -9999px;
+        }
+        &:hover {
+            background-position-x: -253px;
+        }
+        &.service {
+            background-position-x: -291px;
+            &:hover {
+                background-position-x: -329px;
+            }
+        }
+        &.write {
+            background-position-x: -369px;
+            &:hover {
+                background-position-x: -407px;
+            }
+        }
+        &.top {
+            background-position-x: -444px;
+            &:hover {
+                background-position-x: -482px;
+            }
+        }
+    }
+}

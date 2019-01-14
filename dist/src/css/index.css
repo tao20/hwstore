@@ -1,0 +1,322 @@
+.hr-60 {
+  height: 60px;
+  width: 100%;
+  display: block; }
+
+body {
+  overflow-x: hidden; }
+
+a:hover {
+  text-decoration: none; }
+
+.container {
+  padding: 0; }
+
+.banner {
+  height: 448px;
+  position: relative; }
+  .banner a {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    float: left; }
+  .banner .circles {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    z-index: 100;
+    transform: translateX(-50%); }
+    .banner .circles li {
+      float: left;
+      width: 12px;
+      height: 12px;
+      margin-left: 10px;
+      border: 1px solid #fff;
+      border-radius: 50%;
+      cursor: pointer; }
+      .banner .circles li.act {
+        background: #fff; }
+
+.channel-floor .h {
+  margin-bottom: 16px; }
+  .channel-floor .h h2 {
+    font: 30px 'microsoft yahei';
+    text-align: center;
+    margin-bottom: 25px; }
+    .channel-floor .h h2 > a:hover {
+      color: #900; }
+    .channel-floor .h h2::before {
+      content: '';
+      display: block;
+      height: 4px;
+      width: 24px;
+      margin: 0 auto;
+      background: #900; }
+
+.channel-floor .b .toggle {
+  position: relative;
+  float: left;
+  margin-left: -1px;
+  margin-bottom: 15px; }
+  .channel-floor .b .toggle > a {
+    display: inline-block;
+    width: 299px;
+    height: 278px;
+    border: 1px solid #eaeaea; }
+    .channel-floor .b .toggle > a > img {
+      height: 100%; }
+  .channel-floor .b .toggle::before {
+    position: absolute;
+    top: 0;
+    content: '';
+    display: block;
+    width: 0;
+    height: 4px;
+    background: #900;
+    transition: all 0.2s linear; }
+  .channel-floor .b .toggle:hover::before {
+    width: 100%; }
+
+.channel-floor .b .grid-item li {
+  margin-left: 20px;
+  float: left;
+  position: relative; }
+  .channel-floor .b .grid-item li:first-child {
+    margin-left: 0; }
+  .channel-floor .b .grid-item li .gray {
+    background: #888; }
+  .channel-floor .b .grid-item li:hover p {
+    background: rgba(153, 0, 0, 0.8); }
+  .channel-floor .b .grid-item li a > div {
+    height: 190px; }
+  .channel-floor .b .grid-item li p {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 190px;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    color: #fff; }
+    .channel-floor .b .grid-item li p i {
+      font-size: 18px; }
+    .channel-floor .b .grid-item li p span {
+      display: block;
+      margin: 10px 0 25px; }
+    .channel-floor .b .grid-item li p em {
+      font-size: 13px; }
+      .channel-floor .b .grid-item li p em::before {
+        content: '';
+        display: block;
+        margin-bottom: 5px;
+        width: 24px;
+        height: 2px;
+        background: #fff; }
+
+.channel-floor .h,
+.mobile .h {
+  position: relative; }
+  .channel-floor .h h2 a,
+  .mobile .h h2 a {
+    color: #333; }
+  .channel-floor .h ul,
+  .mobile .h ul {
+    text-align: center;
+    font-size: 14px;
+    padding-bottom: 5px; }
+    .channel-floor .h ul li,
+    .mobile .h ul li {
+      display: inline-block; }
+      .channel-floor .h ul li a,
+      .mobile .h ul li a {
+        margin: 0 10px;
+        color: #666; }
+        .channel-floor .h ul li a:hover,
+        .mobile .h ul li a:hover {
+          color: #900; }
+  .channel-floor .h .more,
+  .mobile .h .more {
+    position: absolute;
+    right: 0;
+    bottom: 0; }
+    .channel-floor .h .more a,
+    .mobile .h .more a {
+      display: block;
+      width: 68px;
+      height: 29px;
+      border: 1px solid #ccc;
+      color: #333;
+      text-align: center;
+      line-height: 29px; }
+      .channel-floor .h .more a::after,
+      .mobile .h .more a::after {
+        content: '';
+        display: inline-block;
+        border-top: 4px solid transparent;
+        border-left: 6px solid #333;
+        border-bottom: 4px solid transparent;
+        margin-left: 10px; }
+      .channel-floor .h .more a:hover,
+      .mobile .h .more a:hover {
+        border-color: #900;
+        color: #900; }
+        .channel-floor .h .more a:hover::after,
+        .mobile .h .more a:hover::after {
+          border-left-color: #900; }
+
+.channel-floor .b .phones li,
+.mobile .b .phones li {
+  float: left;
+  text-align: center;
+  margin-left: 12px;
+  padding: 0;
+  position: relative; }
+  .channel-floor .b .phones li:first-child,
+  .mobile .b .phones li:first-child {
+    margin-left: 0; }
+  .channel-floor .b .phones li.top,
+  .mobile .b .phones li.top {
+    margin-top: 12px; }
+  .channel-floor .b .phones li .mes,
+  .mobile .b .phones li .mes {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    font: 18px 'microsoft yahei';
+    color: #333;
+    text-align: left; }
+    .channel-floor .b .phones li .mes::before,
+    .mobile .b .phones li .mes::before {
+      content: '';
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: #900;
+      margin-bottom: 12px; }
+    .channel-floor .b .phones li .mes i,
+    .mobile .b .phones li .mes i {
+      color: #900; }
+    .channel-floor .b .phones li .mes p,
+    .mobile .b .phones li .mes p {
+      margin-bottom: 15px; }
+  .channel-floor .b .phones li .white,
+  .mobile .b .phones li .white {
+    color: #fff; }
+    .channel-floor .b .phones li .white i,
+    .mobile .b .phones li .white i {
+      color: #fff; }
+  .channel-floor .b .phones li .new,
+  .channel-floor .b .phones li .hot,
+  .mobile .b .phones li .new,
+  .mobile .b .phones li .hot {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    width: 48px;
+    height: 48px;
+    text-align: center;
+    line-height: 48px;
+    font-size: 14px;
+    color: #fff;
+    border-radius: 50%;
+    background: #00DB4B; }
+  .channel-floor .b .phones li .hot,
+  .mobile .b .phones li .hot {
+    background: #FDB610; }
+
+.computer .b .toggle {
+  width: 400px;
+  margin-bottom: 0; }
+  .computer .b .toggle a {
+    width: 400px;
+    height: 374px;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    font-size: 14px; }
+    .computer .b .toggle a img.sm {
+      display: block;
+      width: 200px;
+      margin: 39px auto 0; }
+    .computer .b .toggle a .new {
+      position: absolute;
+      right: 100px;
+      bottom: 130px;
+      width: 48px;
+      height: 48px;
+      text-align: center;
+      line-height: 48px;
+      font-size: 14px;
+      color: #fff;
+      border-radius: 50%;
+      background: #00DB4B; }
+    .computer .b .toggle a p {
+      font-size: 18px;
+      color: #333;
+      margin-top: 30px; }
+    .computer .b .toggle a span {
+      color: #888; }
+    .computer .b .toggle a i {
+      display: block;
+      color: #900; }
+      .computer .b .toggle a i::before {
+        content: '';
+        display: block;
+        margin: 10px auto 5px;
+        width: 24px;
+        height: 2px;
+        background: #900; }
+  .computer .b .toggle:hover .shadow {
+    background: #900; }
+  .computer .b .toggle .shadow {
+    position: absolute;
+    left: 400px;
+    top: 0;
+    width: 400px;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 74px 10px 0 22px;
+    font-size: 14px;
+    text-align: left; }
+    .computer .b .toggle .shadow span {
+      color: #fff;
+      font-size: 25px; }
+    .computer .b .toggle .shadow b {
+      display: block;
+      margin-top: 5px;
+      color: #fff; }
+    .computer .b .toggle .shadow i {
+      color: #fff; }
+      .computer .b .toggle .shadow i::before {
+        margin: 15px 0 10px 0;
+        background: #fff; }
+
+.go-top {
+  position: fixed;
+  right: 0;
+  bottom: 100px;
+  background: #fff; }
+  .go-top li {
+    width: 38px;
+    height: 41px;
+    cursor: pointer;
+    background: url("../img/icon-header.png") no-repeat -215px -120px; }
+    .go-top li a {
+      display: block;
+      width: 38px;
+      height: 41px;
+      text-indent: -9999px; }
+    .go-top li:hover {
+      background-position-x: -253px; }
+    .go-top li.service {
+      background-position-x: -291px; }
+      .go-top li.service:hover {
+        background-position-x: -329px; }
+    .go-top li.write {
+      background-position-x: -369px; }
+      .go-top li.write:hover {
+        background-position-x: -407px; }
+    .go-top li.top {
+      background-position-x: -444px; }
+      .go-top li.top:hover {
+        background-position-x: -482px; }
